@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhi Enterprises | Power Tools & Hardware</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo & Business Name -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="showPage('home')">
+                <div class="bg-amber-500 text-slate-900 p-3 rounded-lg font-bold text-2xl shadow">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight leading-none">NIDHI ENTERPRISES</h1>
+                    <p class="text-xs text-amber-600 font-semibold tracking-wider">POWER TOOLS & HARDWARE</p>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation --> 
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <button onclick="showPage('home')" class="nav-btn text-amber-600 hover:text-amber-500 transition py-2" id="nav-home">Home</button>
+                <button onclick="showPage('about')" class="nav-btn text-gray-600 hover:text-amber-500 transition py-2" id="nav-about">About Us</button>
+                <button onclick="showPage('products')" class="nav-btn text-gray-600 hover:text-amber-500 transition py-2" id="nav-products">Products</button>
+                <button onclick="showPage('contact')" class="nav-btn text-gray-600 hover:text-amber-500 transition py-2" id="nav-contact">Contact Us</button>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center space-x-3">
+                <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20the%20details%20and%20price." target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium shadow flex items-center space-x-2 transition">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-700 hover:text-amber-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <button onclick="showPage('home')" class="mobile-nav-btn block w-full text-left py-2 px-3 rounded text-amber-600 font-medium bg-amber-50" id="mnav-home">Home</button>
+            <button onclick="showPage('about')" class="mobile-nav-btn block w-full text-left py-2 px-3 rounded text-gray-700 hover:bg-gray-100 font-medium" id="mnav-about">About Us</button>
+            <button onclick="showPage('products')" class="mobile-nav-btn block w-full text-left py-2 px-3 rounded text-gray-700 hover:bg-gray-100 font-medium" id="mnav-products">Products</button>
+            <button onclick="showPage('contact')" class="mobile-nav-btn block w-full text-left py-2 px-3 rounded text-gray-700 hover:bg-gray-100 font-medium" id="mnav-contact">Contact Us</button>
+            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20the%20details%20and%20price." target="_blank" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium shadow mt-3">
+                <i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp Us
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow">
+        
+        <!-- PAGE 1: HOME -->
+        <section id="page-home" class="page-content">
+            <!-- Hero Section -->
+            <div class="bg-slate-900 text-white py-16 sm:py-24 relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="max-w-2xl">
+                        <span class="inline-block bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">Pune's Hardware Hub</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">Power Tools & Hardware for Your Needs</h2>
+                        <p class="text-gray-300 text-base sm:text-lg mb-8">Nidhi Enterprises provides power tools, hardware products, and accessories for professionals, contractors, workshops, and individual customers.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <button onclick="showPage('products')" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 rounded-lg shadow-lg transition">View Products</button>
+                            <button onclick="showPage('contact')" class="bg-transparent hover:bg-slate-800 border-2 border-white text-white font-bold px-6 py-3 rounded-lg transition">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Categories Section -->
+            <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Product Categories</h3>
+                    <p class="text-gray-600 mt-2">Explore our extensive range of reliable tools and accessories</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-toilet-portable text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Drills</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-compact-disc text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Angle Grinders</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-hammer text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Rotary Hammers</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-hill-rockslide text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Demolition Hammers</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-scissors text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Cutting Machines</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-gears text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Accessories</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-wrench text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Hand Tools</h4>
+                    </div>
+                    <div onclick="showPage('products')" class="bg-white p-6 rounded-xl border border-gray-200 text-center hover:shadow-lg hover:border-amber-500 transition cursor-pointer group">
+                        <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-boxes-stacked text-2xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900">Other Hardware</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us -->
+            <div class="bg-slate-100 py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Why Choose Us</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-award text-amber-500 text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Quality Products</h4>
+                            <p class="text-gray-600 text-sm">Top-tier power tools and hardware selected for durability and precision performance.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-layer-group text-amber-500 text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Wide Range of Tools</h4>
+                            <p class="text-gray-600 text-sm">Comprehensive range of options for individual users, professional workshops, and contractors.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                            <i class="fa-solid fa-headset text-amber-500 text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Customer Support</h4>
+                            <p class="text-gray-600 text-sm">Expert staff ready to assist you in selecting the right tools for your specific project requirements.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col items-center text-center">
+                            <i class="fa-brands fa-whatsapp text-amber-500 text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">Easy Enquiry</h4>
+                            <p class="text-gray-600 text-sm">Simple, single-click WhatsApp direct messaging to quickly check product availability and pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: ABOUT US -->
+        <section id="page-about" class="page-content hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mb-8">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-4">About Nidhi Enterprises</h2>
+                    <div class="w-16 h-1 bg-amber-500 mb-6"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Nidhi Enterprises is a power tools and hardware shop located in Pune. We provide power tools, accessories and hardware products for professionals, contractors, workshops and individual customers. Our aim is to provide quality products and help customers choose the right tools for their requirements.
+                        </p>
+                        <div class="pt-4 border-t border-gray-100 flex items-start space-x-3 text-gray-600">
+                            <i class="fa-solid fa-location-dot text-amber-500 text-xl mt-1"></i>
+                            <div>
+                                <strong class="text-slate-900 block">Address:</strong>
+                                Aru Palace Building, Shop No. 4, Pune 411028, Maharashtra
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-slate-200 rounded-2xl h-80 flex flex-col items-center justify-center text-gray-500 border-2 border-dashed border-gray-300">
+                            <i class="fa-solid fa-store text-5xl mb-3 text-gray-400"></i>
+                            <span class="font-medium">Shop Photograph</span>
+                            <span class="text-xs text-gray-400">(Aru Palace Building, Shop No. 4)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: PRODUCTS -->
+        <section id="page-products" class="page-content hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Our Products</h2>
+                    <p class="text-gray-600">Select products and enquire via WhatsApp for prices and specs</p>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <button onclick="filterProducts('all')" class="product-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-slate-900 font-bold text-sm shadow-sm" data-filter="all">All Items</button>
+                    <button onclick="filterProducts('power-tools')" class="product-filter-btn px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:border-amber-500 font-medium text-sm" data-filter="power-tools">Power Tools</button>
+                    <button onclick="filterProducts('accessories')" class="product-filter-btn px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:border-amber-500 font-medium text-sm" data-filter="accessories">Accessories</button>
+                    <button onclick="filterProducts('hardware')" class="product-filter-btn px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:border-amber-500 font-medium text-sm" data-filter="hardware">Hardware & Hand Tools</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="power-tools">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-toilet-portable text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Power Tools</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Heavy Duty Electric Drill</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">High-speed professional impact drill suited for wood, metal, and concrete masonry work.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%20Heavy%20Duty%20Electric%20Drill.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="power-tools">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-compact-disc text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Power Tools</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">4-Inch Angle Grinder</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Durable, compact grinder for metal cutting, grinding, and surface preparation tasks.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%204-Inch%20Angle%20Grinder.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="power-tools">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-hammer text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Power Tools</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Industrial Rotary Hammer</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Multi-function rotary hammer engineered for heavy-duty concrete drilling and chiseling.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%20Industrial%20Rotary%20Hammer.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="accessories">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-gears text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Accessories</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">High-Speed Drill Bit Set</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Multi-size precision drill bits set for metal, wood, and concrete applications.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%20High-Speed%20Drill%20Bit%20Set.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="accessories">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-circle-notch text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Accessories</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Abrasive Cutting Discs</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Reinforced cutting disch set designed for smooth, high-precision metal cutting.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%20Abrasive%20Cutting%20Discs.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="product-card bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition flex flex-col" data-category="hardware">
+                        <div class="h-48 bg-gray-100 flex items-center justify-center">
+                            <i class="fa-solid fa-ruler-combined text-6xl text-amber-500"></i>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <span class="text-xs font-semibold text-amber-600 uppercase tracking-wider mb-1">Hardware & Hand Tools</span>
+                            <h3 class="font-bold text-lg text-slate-900 mb-2">Professional Measuring Tape</h3>
+                            <p class="text-gray-600 text-sm mb-4 flex-grow">Durable steel measuring tape equipped with clear markings and dynamic locking mechanism.</p>
+                            <a href="https://wa.me/?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20the%20Professional%20Measuring%20Tape.%20Please%20share%20the%20details%20and%20price." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enquire Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: CONTACT US -->
+        <section id="page-contact" class="page-content hidden py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Contact Us</h2>
+                    <p class="text-gray-600">Get in touch or visit our shop in Pune</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Contact Information Panel -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-4 border-b border-gray-100 pb-2">Business Details</h3>
+                            <p class="text-amber-600 font-bold mb-1">Nidhi Enterprises</p>
+                            <p class="text-sm text-gray-500">Power Tools & Hardware Shop</p>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-location-dot text-amber-500 text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-900 block">Address:</span>
+                                    <span class="text-gray-600">Aru Palace Building, Shop No. 4, Pune - 411028, Maharashtra</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-phone text-amber-500 text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-900 block">Phone:</span>
+                                    <span class="text-gray-600">+91 917972683619</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-brands fa-whatsapp text-amber-500 text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-900 block">WhatsApp:</span>
+                                    <span class="text-gray-600">+91 917972683619</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-clock text-amber-500 text-lg mt-0.5"></i>
+                                <div>
+                                    <span class="font-semibold text-slate-900 block">Business Hours:</span>
+                                    <span class="text-gray-600">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: Closed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100 space-y-2">
+                            <a href="tel:+917972683619" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Call Now</span>
+                            </a>
+                            <a href="https://wa.me/917972683619?text=Hello%20Nidhi%20Enterprises%2C%20I%20am%20interested%20in%20your%20products." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>WhatsApp Us</span>
+                            </a>
+                            <a href="https://maps.google.com/?q=Aru+Palace+Building+Shop+No+4+Pune+411028" target="_blank" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-900 font-medium py-2.5 px-4 rounded-lg flex items-center justify-center space-x-2 transition">
+                                <i class="fa-solid fa-location-arrow"></i>
+                                <span>Get Directions</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Map Area -->
+                    <div class="lg:col-span-2 bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden min-h-[350px]">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Aru%20Palace%20Building,%20Shop%20No.%204,%20Pune%20411028&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white pt-10 pb-6 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                <div>
+                    <h3 class="font-extrabold text-lg text-amber-500 mb-2">NIDHI ENTERPRISES</h3>
+                    <p class="text-sm text-gray-400 mb-4">Power Tools & Hardware Shop</p>
+                    <p class="text-xs text-gray-400">Aru Palace Building, Shop No. 4,<br>Pune - 411028, Maharashtra</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-gray-300 mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><button onclick="showPage('home')" class="hover:text-amber-500">Home</button></li>
+                        <li><button onclick="showPage('about')" class="hover:text-amber-500">About Us</button></li>
+                        <li><button onclick="showPage('products')" class="hover:text-amber-500">Products</button></li>
+                        <li><button onclick="showPage('contact')" class="hover:text-amber-500">Contact Us</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm uppercase tracking-wider text-gray-300 mb-3">Get in Touch</h4>
+                    <p class="text-sm text-gray-400 mb-2"><i class="fa-solid fa-phone mr-2 text-amber-500"></i> Call Support</p>
+                    <p class="text-sm text-gray-400 mb-4"><i class="fa-brands fa-whatsapp mr-2 text-amber-500"></i> WhatsApp Instant Chat</p>
+                    <a href="https://maps.google.com/?q=Aru+Palace+Building+Shop+No+4+Pune+411028" target="_blank" class="text-xs text-amber-500 hover:underline flex items-center">
+                        <i class="fa-solid fa-map-location-dot mr-1"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-xs text-gray-500">
+                <p>NIDHI ENTERPRISES | Power Tools & Hardware | Pune - 411028</p>
+                <p class="mt-1">&copy; All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Page Navigation Controller
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.add('hidden'));
+
+            // Show selected page
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+            }
+
+            // Update Desktop Nav style
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-amber-600');
+                btn.classList.add('text-gray-600');
+            });
+            const activeNav = document.getElementById('nav-' + pageId);
+            if (activeNav) {
+                activeNav.classList.remove('text-gray-600');
+                activeNav.classList.add('text-amber-600');
+            }
+
+            // Update Mobile Nav style
+            document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-50', 'text-amber-600');
+                btn.classList.add('text-gray-700');
+            });
+            const activeMobileNav = document.getElementById('mnav-' + pageId);
+            if (activeMobileNav) {
+                activeMobileNav.classList.remove('text-gray-700');
+                activeMobileNav.classList.add('bg-amber-50', 'text-amber-600');
+            }
+
+            // Close Mobile Menu if Open
+            document.getElementById('mobile-menu').classList.add('hidden');
+
+            // Scroll back to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Toggle logic
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Product Filter Controller
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const filterBtns = document.querySelectorAll('.product-filter-btn');
+
+            // Toggle category active styles
+            filterBtns.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = 'product-filter-btn px-4 py-2 rounded-lg bg-amber-500 text-slate-900 font-bold text-sm shadow-sm';
+                } else {
+                    btn.className = 'product-filter-btn px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700 hover:border-amber-500 font-medium text-sm';
+                }
+            });
+
+            // Filter products display
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
